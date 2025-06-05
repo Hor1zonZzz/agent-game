@@ -1,10 +1,13 @@
 import subprocess
+import sys
 
 def run_agent_with_input(input_str):
+    python_exe = sys.executable  # Get the current Python executable path
     result = subprocess.run(
-        ['python', 'agent.py', input_str],
+        [python_exe, 'agent.py', input_str],
         capture_output=True, text=True
     )
+    print("error:", result.stderr)
     return result.stdout
 
 if __name__ == "__main__":
