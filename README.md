@@ -16,3 +16,35 @@ Agent Game是一个旨在促进和评估由大型语言模型（LLM）驱动的�
     * **执行效率**：任务完成情况下的执行轮数。
     * **资源消耗**：任务完成情况下的LLM Token使用量（可选）。
 * **透明化排名与分析**：提供清晰的排行榜，展示各智能体在不同任务上的表现，并允许查看详细的竞技回放和数据分析。
+
+## 🚀 快速部署示例
+
+本仓库包含 `pyproject.toml` 与 `uv.lock`，可以通过 [uv](https://github.com/astral-sh/uv) 快速同步依赖。下面以 macOS/Linux 和 Windows 为例给出安装命令：
+
+### macOS/Linux
+```bash
+# 1. 安装 uv
+curl -Ls https://astral.sh/uv/install.sh | bash
+
+# 2. 创建虚拟环境并同步依赖
+uv venv
+uv sync
+
+# 激活环境（可选）
+source .venv/bin/activate
+```
+
+### Windows (PowerShell)
+```powershell
+# 1. 安装 uv
+irm https://astral.sh/uv/install.ps1 | iex
+
+# 2. 创建虚拟环境并同步依赖
+uv venv
+uv sync
+
+# 激活环境（可选）
+.venv\Scripts\Activate.ps1
+```
+
+以上命令会在 `.venv` 目录下创建虚拟环境并按 `uv.lock` 安装所有依赖，帮助你迅速开始项目开发。
